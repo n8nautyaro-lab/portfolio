@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Yaroslav Suslov — Automation &amp; AI Engineer</title>
+<meta name="description" content="Yaroslav Suslov builds workflow automation and AI agents that remove manual work from sales, marketing and support teams. 100+ production workflows, ~620 hours saved per month.">
+<link rel="canonical" href="https://suslovautomation.com/">
+<meta name="author" content="Yaroslav Suslov">
+<meta name="theme-color" content="#0A1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1628'/%3E%3Cpath d='M18 19l14 16 14-16' stroke='%234D8FF0' stroke-width='7' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M32 35v12' stroke='%234D8FF0' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1628'/%3E%3Cpath d='M18 19l14 16 14-16' stroke='%234D8FF0' stroke-width='7' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M32 35v12' stroke='%234D8FF0' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://suslovautomation.com/">
+<meta property="og:title" content="Yaroslav Suslov — Automation &amp; AI Engineer">
+<meta property="og:description" content="Yaroslav Suslov builds workflow automation and AI agents that remove manual work from sales, marketing and support teams. 100+ production workflows, ~620 hours saved per month.">
+<meta property="og:image" content="https://suslovautomation.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yaroslav Suslov — Automation &amp; AI Engineer">
+<meta name="twitter:description" content="Yaroslav Suslov builds workflow automation and AI agents that remove manual work from sales, marketing and support teams. 100+ production workflows, ~620 hours saved per month.">
+<meta name="twitter:image" content="https://suslovautomation.com/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yaroslav Suslov",
+  "jobTitle": "Automation & AI Engineer",
+  "url": "https://suslovautomation.com/",
+  "email": "mailto:n8n.aut.yaro@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+  "sameAs": ["https://www.linkedin.com/in/yaroslav-suslov-1aa663253/"],
+  "knowsAbout": ["Workflow automation", "n8n", "AI agents", "Python", "Process automation"]
+}
+</script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<style>
+  :root {
+    --navy:      #0A1628;
+    --navy-2:    #12213C;
+    --navy-3:    #1B2E4F;
+    --blue:      #1D6FE8;
+    --blue-hi:   #4D8FF0;
+    --blue-deep: #1558CC;
+    --ice:       #EBF4FF;
+
+    --page:      #FFFFFF;
+    --page-alt:  #F8FAFC;
+    --card:      #FFFFFF;
+    --edge:      #E7EDF5;
+
+    --t-900: #0A1628;
+    --t-700: #334155;
+    --t-600: #475569;
+    --t-500: #64748B;
+    --t-400: #94A3B8;
+
+    --on-dark:     #FFFFFF;
+    --on-dark-mut: #CBD5E1;
+    --dark-edge:   rgba(255,255,255,.12);
+    --dark-card:   rgba(255,255,255,.05);
+
+    --head: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+    --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --r-sm: 12px;
+    --r:    16px;
+    --r-lg: 24px;
+    --pill: 9999px;
+    --shell: 1140px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page:     #0A1628;
+      --page-alt: #0D1B31;
+      --card:     #12213C;
+      --edge:     #1E3358;
+      --ice:      #13263F;
+      --t-900:    #F1F5F9;
+      --t-700:    #CBD5E1;
+      --t-600:    #B4C2D4;
+      --t-500:    #94A3B8;
+      --t-400:    #7B8CA3;
+      --blue:     #4D8FF0;
+      --blue-deep:#7FB0F7;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page:     #0A1628;
+    --page-alt: #0D1B31;
+    --card:     #12213C;
+    --edge:     #1E3358;
+    --ice:      #13263F;
+    --t-900:    #F1F5F9;
+    --t-700:    #CBD5E1;
+    --t-600:    #B4C2D4;
+    --t-500:    #94A3B8;
+    --t-400:    #7B8CA3;
+    --blue:     #4D8FF0;
+    --blue-deep:#7FB0F7;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--page);
+    color: var(--t-700);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .nav-brand, .stat b, .btn {
+    font-family: var(--head);
+    color: var(--t-900);
+  }
+
+  .shell {
+    max-width: var(--shell);
+    margin: 0 auto;
+    padding: 0 clamp(1.15rem, 4vw, 2.5rem);
+  }
+
+  /* ---------------- nav ---------------- */
+
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(10,22,40,.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--dark-edge);
+  }
+  .nav-in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 62px;
+  }
+  .nav-brand {
+    font-size: .98rem;
+    font-weight: 700;
+    color: var(--on-dark);
+    letter-spacing: -.015em;
+    text-decoration: none;
+  }
+  .nav-links { display: none; gap: 1.85rem; }
+  @media (min-width: 860px) { .nav-links { display: flex; } }
+  .nav-links a {
+    color: var(--on-dark-mut);
+    text-decoration: none;
+    font-size: .88rem;
+    padding: .3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .nav-links a:hover { color: var(--on-dark); border-bottom-color: var(--blue-hi); }
+  .nav-links a:focus-visible,
+  .btn:focus-visible,
+  .lnk:focus-visible { outline: 2px solid var(--blue-hi); outline-offset: 3px; border-radius: 4px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: var(--pill);
+    padding: .62rem 1.25rem;
+    font-size: .88rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn-solid { background: #FFFFFF; color: var(--navy); border: 1px solid #FFFFFF; }
+  .btn-solid:hover { background: var(--ice); border-color: var(--ice); color: var(--navy); }
+  .btn-ghost { background: transparent; color: var(--on-dark); border: 1px solid rgba(255,255,255,.32); }
+  .btn-ghost:hover { border-color: #FFFFFF; background: rgba(255,255,255,.08); }
+  .btn-blue { background: var(--blue); color: #FFFFFF; border: 1px solid var(--blue); }
+  .btn-blue:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+
+  /* ---------------- hero ---------------- */
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(900px 420px at 78% 8%, rgba(29,111,232,.30), transparent 62%),
+      radial-gradient(650px 380px at 8% 88%, rgba(77,143,240,.16), transparent 64%),
+      linear-gradient(168deg, var(--navy) 0%, var(--navy-2) 58%, var(--navy-3) 100%);
+    padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(3rem, 7vw, 5rem);
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 62px 62px;
+    mask-image: radial-gradient(ellipse 78% 62% at 50% 32%, #000 35%, transparent 76%);
+    -webkit-mask-image: radial-gradient(ellipse 78% 62% at 50% 32%, #000 35%, transparent 76%);
+    pointer-events: none;
+  }
+  .hero .shell { position: relative; z-index: 1; }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    border-radius: var(--pill);
+    border: 1px solid var(--dark-edge);
+    background: var(--dark-card);
+    padding: .42rem 1rem .42rem .75rem;
+    font-size: .79rem;
+    color: var(--on-dark-mut);
+  }
+  .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #34D399;
+    box-shadow: 0 0 0 3px rgba(52,211,153,.18);
+    flex: none;
+  }
+
+  .hero h1 {
+    color: var(--on-dark);
+    font-size: clamp(2.35rem, 6.2vw, 3.85rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.032em;
+    margin: 1.5rem 0 0;
+    max-width: 17ch;
+    text-wrap: balance;
+  }
+  .hero h1 i { font-style: normal; color: var(--blue-hi); }
+
+  .hero p.sub {
+    color: var(--on-dark-mut);
+    font-size: clamp(1rem, 2.1vw, 1.1rem);
+    line-height: 1.68;
+    max-width: 56ch;
+    margin: 1.35rem 0 0;
+  }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.1rem; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1px;
+    margin-top: clamp(2.75rem, 6vw, 4rem);
+    background: var(--dark-edge);
+    border: 1px solid var(--dark-edge);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+  }
+  @media (min-width: 760px) { .stats { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+  .stat { background: rgba(10,22,40,.55); padding: 1.4rem 1.35rem; }
+  .stat b {
+    display: block;
+    color: var(--on-dark);
+    font-size: clamp(1.55rem, 3.4vw, 2.05rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat span {
+    display: block;
+    margin-top: .5rem;
+    font-size: .8rem;
+    line-height: 1.5;
+    color: var(--t-400);
+  }
+
+  /* ---------------- sections ---------------- */
+
+  section.band { padding: clamp(3.25rem, 8vw, 5.5rem) 0; background: var(--page); }
+  section.band.alt { background: var(--page-alt); border-top: 1px solid var(--edge); border-bottom: 1px solid var(--edge); }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: .76rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: .8rem;
+  }
+  h2 {
+    font-size: clamp(1.7rem, 4.1vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -.028em;
+    margin: 0;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .sec-sub {
+    margin: 1rem 0 0;
+    color: var(--t-600);
+    max-width: 62ch;
+    font-size: 1.02rem;
+  }
+  .sec-head { margin-bottom: clamp(2rem, 4vw, 2.75rem); }
+
+  /* ---------------- cases ---------------- */
+
+  .cases { display: grid; gap: 1.15rem; }
+  @media (min-width: 900px) { .cases { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  .cases .wide { grid-column: 1 / -1; }
+
+  .case {
+    background: var(--card);
+    border: 1px solid var(--edge);
+    border-radius: var(--r-lg);
+    padding: clamp(1.4rem, 3vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color .22s ease, transform .22s ease;
+  }
+  .case:hover { border-color: var(--blue); transform: translateY(-3px); }
+
+  .case-top { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+  .chip {
+    border-radius: var(--pill);
+    background: var(--ice);
+    color: var(--blue-deep);
+    font-size: .73rem;
+    font-weight: 600;
+    padding: .26rem .72rem;
+    white-space: nowrap;
+  }
+
+  .case h3 {
+    font-size: clamp(1.14rem, 2.3vw, 1.34rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -.02em;
+    margin: 0;
+  }
+
+  .qline { margin: 0; font-size: .955rem; color: var(--t-600); }
+  .qline + .qline { margin-top: .65rem; }
+  .qline b {
+    display: block;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--t-400);
+    margin-bottom: .18rem;
+  }
+
+  .result {
+    margin-top: auto;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--edge);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .55rem .9rem;
+  }
+  .result strong {
+    font-family: var(--head);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -.03em;
+    color: var(--blue);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .result span { font-size: .85rem; color: var(--t-500); }
+
+  .tools {
+    font-size: .8rem;
+    color: var(--t-400);
+    border-top: 1px solid var(--edge);
+    padding-top: .85rem;
+  }
+
+  /* ---------------- approach ---------------- */
+
+  .steps { display: grid; gap: 1.15rem; counter-reset: st; }
+  @media (min-width: 760px) { .steps { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (min-width: 1040px) { .steps { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+  .step {
+    counter-increment: st;
+    background: var(--card);
+    border: 1px solid var(--edge);
+    border-radius: var(--r);
+    padding: 1.5rem 1.35rem;
+  }
+  .step::before {
+    content: counter(st, decimal-leading-zero);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px; height: 34px;
+    border-radius: var(--pill);
+    background: var(--ice);
+    color: var(--blue-deep);
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: .82rem;
+    margin-bottom: .9rem;
+  }
+  .step h3 { font-size: 1.02rem; font-weight: 700; margin: 0 0 .4rem; letter-spacing: -.015em; }
+  .step p { margin: 0; font-size: .93rem; color: var(--t-600); }
+
+  /* ---------------- toolkit ---------------- */
+
+  .kit { display: grid; gap: 1.15rem; }
+  @media (min-width: 640px) { .kit { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (min-width: 1040px) { .kit { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+  .kit-col {
+    background: var(--card);
+    border: 1px solid var(--edge);
+    border-radius: var(--r);
+    padding: 1.4rem 1.3rem;
+  }
+  .kit-col h3 {
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 .85rem;
+  }
+  .kit-col ul { list-style: none; margin: 0; padding: 0; }
+  .kit-col li {
+    font-size: .9rem;
+    color: var(--t-600);
+    padding: .3rem 0 .3rem 1.1rem;
+    position: relative;
+  }
+  .kit-col li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: .82rem;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--blue);
+    opacity: .55;
+  }
+
+  /* ---------------- contact ---------------- */
+
+  .contact-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    padding: clamp(2.25rem, 5.5vw, 3.75rem);
+    background:
+      radial-gradient(680px 320px at 84% 6%, rgba(29,111,232,.34), transparent 62%),
+      linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 62%, var(--navy-3) 100%);
+    text-align: center;
+  }
+  .contact-card h2 { color: var(--on-dark); margin: 0 auto; max-width: 20ch; }
+  .contact-card p { color: var(--on-dark-mut); max-width: 52ch; margin: 1rem auto 0; }
+  .contact-card .cta-row { justify-content: center; }
+
+  footer {
+    padding: 2rem 0 2.5rem;
+    border-top: 1px solid var(--edge);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem 2rem;
+    font-size: .85rem;
+    color: var(--t-500);
+  }
+  .lnk { color: var(--blue); text-decoration: none; font-weight: 500; }
+  .lnk:hover { text-decoration: underline; }
+
+  /* ---------------- copy button ---------------- */
+
+  /* reset only what <button> adds - never background or border,
+     those belong to .btn-solid / .btn-ghost and must not be overridden here */
+  button.btn {
+    font: inherit;
+    cursor: pointer;
+  }
+  button.lnk {
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    color: var(--blue);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  button.lnk:hover { text-decoration: underline; }
+  button.lnk:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+
+  .btn.js-copy { position: relative; }
+
+  /* toast */
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 26px;
+    z-index: 80;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .72rem 1.15rem;
+    border-radius: var(--r);
+    background: var(--navy);
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 12px 34px rgba(10,22,40,.32);
+    color: #FFFFFF;
+    font-family: var(--head);
+    font-size: .88rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 14px);
+    transition: opacity .22s ease, transform .22s ease, visibility .22s;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+  .toast .check {
+    width: 19px; height: 19px;
+    flex: none;
+    border-radius: 50%;
+    background: #10B981;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toast .check svg {
+    width: 11px; height: 11px;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .ico {
+    width: 15px; height: 15px;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+  #work, #approach, #toolkit, #contact { scroll-margin-top: 78px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* ---------------- motion ---------------- */
+
+  .rise { opacity: 0; transform: translateY(16px); animation: rise .55s cubic-bezier(.22,.85,.3,1) forwards; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .r1{animation-delay:.04s}.r2{animation-delay:.11s}.r3{animation-delay:.18s}.r4{animation-delay:.25s}
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise { opacity: 1; transform: none; animation: none; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    .case:hover { transform: none; }
+  }
+</style>
+<style>
+  html { color-scheme: light dark; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="shell nav-in">
+    <a class="nav-brand" href="#top">Yaroslav Suslov</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-solid" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="shell">
+    <span class="badge rise r1"><span class="dot"></span> Automation &amp; AI Engineer &middot; Toronto, ON</span>
+
+    <h1 class="rise r2">Automate the work <i>nobody wants to do.</i></h1>
+
+    <p class="sub rise r3">
+      I'm Yaroslav. For five years I've built workflow automation and AI agents for teams
+      buried in manual steps &mdash; mapping how the work actually happens, shipping the system
+      that removes it, then measuring what it gave back.
+    </p>
+
+    <div class="cta-row rise r3">
+      <a class="btn btn-solid" href="#work">See the work</a>
+      <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+    </div>
+
+    <div class="stats rise r4">
+      <div class="stat"><b>100+</b><span>production workflows running today</span></div>
+      <div class="stat"><b>620h</b><span>manual work removed per month</span></div>
+      <div class="stat"><b>140+</b><span>automations shipped to clients</span></div>
+      <div class="stat"><b>5 yrs</b><span>building automation full-time</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="work">
+  <div class="shell">
+    <div class="sec-head">
+      <span class="eyebrow">Selected work</span>
+      <h2>From a business problem to a system that runs itself.</h2>
+      <p class="sec-sub">
+        Client names are withheld where the work is under agreement; reported figures come from
+        the owners and department leads who measured them.
+      </p>
+    </div>
+
+    <div class="cases">
+
+      <article class="case wide">
+        <div class="case-top">
+          <span class="chip">Beauty salon &middot; Toronto</span>
+          <span class="chip">13 workflows in production</span>
+        </div>
+        <h3>Salon operations, running end to end</h3>
+        <p class="qline"><b>The problem</b>Bookings, client notes, reviews and follow-ups lived in different places. Nothing talked to anything, so the work fell on whoever remembered it that day.</p>
+        <p class="qline"><b>What I built</b>A connected system rather than a set of scripts: customer sync from the booking platform, a daily pull of client notes, outbound message campaigns with cooldown rules so nobody gets contacted twice, review scanning with drafted replies, a bi-weekly staff report, plus a pipeline monitor and error handler that page me before the owner notices anything.</p>
+        <div class="result">
+          <strong>+73%</strong><span>review volume</span>
+          <strong>26 / 170</strong><span>lapsed clients recovered, campaign still running</span>
+        </div>
+        <p class="tools">n8n &middot; Square API &middot; Google Business Profile &middot; Sheets &middot; Telegram alerting &middot; scheduled orchestration</p>
+      </article>
+
+      <article class="case">
+        <div class="case-top"><span class="chip">AI pipeline</span></div>
+        <h3>Content pipeline from a single voice note</h3>
+        <p class="qline"><b>The problem</b>Publishing one post meant transcribing a recording, writing copy, finding an image, posting it, then logging it. Five tools, every time.</p>
+        <p class="qline"><b>What I built</b>A pipeline triggered from a chat message. It takes text or voice, transcribes the audio, drafts the post through an LLM agent with a tuned prompt, publishes it with a generated image, then extracts metadata into a spreadsheet and calendar. Access control, command routing and conversation memory included.</p>
+        <div class="result"><strong>1 message</strong><span>from voice note to published, logged post</span></div>
+        <p class="tools">n8n &middot; Whisper &middot; LLM agent &middot; image generation &middot; Sheets &amp; Calendar API &middot; Telegram Bot API</p>
+      </article>
+
+      <article class="case">
+        <div class="case-top"><span class="chip">Content system</span><span class="chip">3 workflows, always on</span></div>
+        <h3>LinkedIn publishing with its own feedback loop</h3>
+        <p class="qline"><b>The problem</b>Posting consistently is a scheduling problem. Knowing whether any of it worked is a different problem, and the analytics only exist as screenshots.</p>
+        <p class="qline"><b>What I built</b>Two scheduled publishing pipelines that research, draft and post on their own cadence &mdash; plus a stats workflow that reads screenshots of the platform's analytics through a vision model, writes the numbers to a sheet, and sends a weekly performance summary.</p>
+        <div class="result"><strong>Weekly</strong><span>performance report, assembled without manual entry</span></div>
+        <p class="tools">n8n &middot; Claude &middot; vision model &middot; Google Sheets &middot; Telegram &middot; cron orchestration</p>
+      </article>
+
+      <article class="case">
+        <div class="case-top"><span class="chip">Voice agent</span></div>
+        <h3>Booking agent on voice and chat</h3>
+        <p class="qline"><b>The problem</b>A service business lost bookings during its busiest hours for the dumbest reason: nobody was free to answer the phone.</p>
+        <p class="qline"><b>What I built</b>A voice agent and chat interface sharing one backend, wired to the booking system through MCP. It handles hours, availability and rescheduling on its own, and hands anything unusual to a person with the context already gathered.</p>
+        <div class="result"><strong>Unattended</strong><span>routine bookings handled with no staff involved</span></div>
+        <p class="tools">n8n &middot; voice AI agent &middot; MCP integration &middot; booking API &middot; chat memory</p>
+      </article>
+
+      <article class="case">
+        <div class="case-top"><span class="chip">Hostel &middot; Poland</span></div>
+        <h3>Taking the phone queue off the front desk</h3>
+        <p class="qline"><b>The problem</b>Guests could not get through by phone, so the complaints landed in Google reviews instead. The rating sat at 3.7.</p>
+        <p class="qline"><b>What I built</b>We traced what was actually driving the bad reviews, then put a voice agent in front of the phone line to answer the questions that made up most of the call volume. Over half of callers got what they needed without ever reaching the desk.</p>
+        <div class="result"><strong>3.7 &rarr; 4.1</strong><span>Google rating &middot; ~24% more footfall</span></div>
+        <p class="tools">n8n &middot; voice AI agent &middot; telephony integration</p>
+      </article>
+
+      <article class="case">
+        <div class="case-top"><span class="chip">43-person team</span></div>
+        <h3>Email campaign production, rebuilt</h3>
+        <p class="qline"><b>The problem</b>Every campaign was assembled by hand: copy into templates, templates into the sender, lists rebuilt from scratch each time.</p>
+        <p class="qline"><b>What I built</b>Templated production that took the manual assembly out of the loop, so the team spent its time deciding what to send rather than how to send it.</p>
+        <div class="result"><strong>~170h</strong><span>removed per month &middot; 30% faster cycle</span></div>
+        <p class="tools">n8n &middot; templated HTML &middot; marketing platform integration</p>
+      </article>
+
+      <article class="case">
+        <div class="case-top"><span class="chip">RAG</span></div>
+        <h3>A knowledge base of my own workflows</h3>
+        <p class="qline"><b>The problem</b>Every new automation started from a blank canvas, even when a near-identical one had been built months earlier and forgotten.</p>
+        <p class="qline"><b>What I built</b>A searchable database of existing workflows stored as vector embeddings, queried in plain language by an agent that returns the closest working pattern and explains how to adapt it.</p>
+        <div class="result"><strong>Reuse</strong><span>patterns retrieved instead of rebuilt</span></div>
+        <p class="tools">n8n &middot; Supabase vector store &middot; embeddings &middot; RAG &middot; AI agent</p>
+      </article>
+
+      <article class="case">
+        <div class="case-top"><span class="chip">Side project</span></div>
+        <h3>A YouTube channel that runs without me</h3>
+        <p class="qline"><b>The problem</b>I wanted to find out how far an unattended content pipeline could actually go before a human has to step in.</p>
+        <p class="qline"><b>What I built</b>A daily pipeline that writes the script, generates voiceover and visuals, assembles the video and publishes it on schedule &mdash; with a separate push workflow for uploads and a pull for analytics.</p>
+        <div class="result"><strong>Daily</strong><span>publishing on a schedule, hands off</span></div>
+        <p class="tools">n8n &middot; Claude &middot; ElevenLabs &middot; image generation &middot; YouTube Data API &middot; VPS</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="approach">
+  <div class="shell">
+    <div class="sec-head">
+      <span class="eyebrow">How I work</span>
+      <h2>The part that isn't code.</h2>
+      <p class="sec-sub">
+        Most failed automations are not technical failures. They automate a process nobody
+        actually follows, or land on a team that was never shown how to run them.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Sit with the team first</h3>
+        <p>The documented process and the real one are rarely the same. I map what people actually do, workarounds included.</p>
+      </div>
+      <div class="step">
+        <h3>Build the smallest thing that solves it</h3>
+        <p>Sometimes that is an AI agent. Often it is a scheduled script. The tool follows the problem, never the other way around.</p>
+      </div>
+      <div class="step">
+        <h3>Document it and hand it over</h3>
+        <p>An automation only I can fix is a liability. Whoever uses it gets documentation and a walkthrough.</p>
+      </div>
+      <div class="step">
+        <h3>Agree the number, then check it</h3>
+        <p>We decide what success means before I build &mdash; hours saved, errors avoided, time to answer &mdash; and measure it after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="toolkit">
+  <div class="shell">
+    <div class="sec-head">
+      <span class="eyebrow">Toolkit</span>
+      <h2>What I reach for, and what I skip.</h2>
+      <p class="sec-sub">
+        No tool here is the point. The point is picking the one that makes the solution boring
+        enough to maintain after I hand it over.
+      </p>
+    </div>
+
+    <div class="kit">
+      <div class="kit-col">
+        <h3>Automation</h3>
+        <ul>
+          <li>n8n (self-hosted &amp; cloud)</li>
+          <li>Microsoft Power Automate</li>
+          <li>REST APIs &amp; webhooks</li>
+          <li>MCP integrations</li>
+        </ul>
+      </div>
+      <div class="kit-col">
+        <h3>AI</h3>
+        <ul>
+          <li>AI agents &amp; assistants</li>
+          <li>Claude, OpenAI</li>
+          <li>Whisper, ElevenLabs</li>
+          <li>RAG &amp; vector embeddings</li>
+          <li>Voice agents</li>
+        </ul>
+      </div>
+      <div class="kit-col">
+        <h3>Code &amp; data</h3>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>SQL, MySQL</li>
+          <li>Supabase</li>
+        </ul>
+      </div>
+      <div class="kit-col">
+        <h3>Running it</h3>
+        <ul>
+          <li>Docker</li>
+          <li>VPS / self-hosted</li>
+          <li>Monitoring &amp; alerting</li>
+          <li>Docs &amp; handover</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="contact">
+  <div class="shell">
+    <div class="contact-card">
+      <h2>Got a process that eats the week?</h2>
+      <p>
+        Tell me what it looks like today and I'll tell you honestly whether it's worth
+        automating &mdash; and what it would take.
+      </p>
+      <div class="cta-row">
+        <button type="button" class="btn btn-solid js-copy" data-done="Copied to clipboard">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="js-label">n8n.aut.yaro@gmail.com</span>
+        </button>
+        <a class="btn btn-ghost" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=n8n.aut.yaro@gmail.com&amp;su=Automation%20role" target="_blank" rel="noopener">Write in Gmail</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/yaroslav-suslov-1aa663253/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="shell">
+  <footer>
+    <span>Toronto, ON &middot; Open Work Permit valid through 2029</span>
+    <span>Open to automation &amp; AI engineering roles &mdash; <button type="button" class="lnk js-copy">n8n.aut.yaro@gmail.com</button></span>
+  </footer>
+</div>
+
+<div class="toast" id="toast" aria-hidden="true">
+  <span class="check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
+  <span>Mail copied</span>
+</div>
+
+<p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+
+<script>
+(function () {
+  var EMAIL = "n8n.aut.yaro@gmail.com";
+  var status = document.getElementById("copy-status");
+  var toast = document.getElementById("toast");
+  var toastLabel = toast.querySelector("span:last-child");
+  var hideTimer;
+
+  function flash(message) {
+    toastLabel.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(function () { toast.classList.remove("show"); }, 2200);
+  }
+
+  function copy(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text)
+        .then(function () { return true; })
+        .catch(function () { return legacy(text); });
+    }
+    return Promise.resolve(legacy(text));
+  }
+
+  function legacy(text) {
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.cssText = "position:fixed;top:-1000px;opacity:0";
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, text.length);
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  document.querySelectorAll(".js-copy").forEach(function (btn) {
+    btn.setAttribute("title", "Copy " + EMAIL);
+    btn.setAttribute("aria-label", "Copy email address " + EMAIL);
+
+    btn.addEventListener("click", function () {
+      copy(EMAIL).then(function (ok) {
+        if (ok) {
+          flash("Mail copied");
+          status.textContent = "Email address copied to clipboard";
+        } else {
+          flash(EMAIL);
+          status.textContent = "Copy failed. The address is " + EMAIL;
+        }
+        setTimeout(function () { status.textContent = ""; }, 2200);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
